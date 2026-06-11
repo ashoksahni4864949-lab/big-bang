@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshay Bhai™ - Tennis</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        background: '#100a20',
+                        cardBg: '#1c1236',
+                        primary: '#ff5c00',
+                        primaryHover: '#e65300',
+                        textMuted: '#9a8ab8',
+                        textLight: '#a0a0a0',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #100a20;
+            color: white;
+            /* Subtle radial gradient background to match the image depth */
+            background-image: radial-gradient(circle at center top, #1a1033 0%, #100a20 60%);
+        }
+        
+        .avatar-gradient {
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #ff5c00 100%);
+        }
+
+        .btn-glow {
+            box-shadow: 0 4px 30px rgba(255, 92, 0, 0.4);
+        }
+    </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1620649669825729');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1620649669825729&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body class="min-h-screen flex flex-col items-center py-10 px-4">
+
+    <!-- Main Container -->
+    <main class="w-full max-w-md flex flex-col items-center mt-6">
+        
+        <!-- Profile Image with Gradient Border -->
+        <div class="relative w-36 h-36 rounded-full p-[3px] avatar-gradient mb-6">
+            <div class="bg-background w-full h-full rounded-full overflow-hidden border-4 border-[#100a20]">
+                <img 
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" 
+                    alt="Akshay Bhai Profile" 
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+
+        <!-- Headings -->
+        <h1 class="text-[34px] font-extrabold leading-tight text-center tracking-wide text-white">
+            AKSHAY <br />
+            <span class="text-primary">BHAI™</span>
+        </h1>
+        
+        <h2 class="text-xs font-semibold tracking-[0.2em] text-[#8e7bba] mt-3 uppercase">
+            ( Tennis )
+        </h2>
+
+        <!-- Call To Action Button -->
+        <a href="https://t.me/+HCTuU9D_1fpkNmU1" target="_blank" onclick="fbq('track', 'Subscribe');" class="block text-center w-full bg-gradient-to-r from-[#ff6a00] to-[#ff4e00] hover:from-[#e65f00] hover:to-[#e64600] text-white font-bold text-lg py-4 rounded-xl mt-8 btn-glow transition-all duration-300 transform hover:scale-[1.02] active:scale-95">
+            SUBSCRIBE NOW
+        </a>
+
+        <!-- Social Proof Text -->
+        <p class="text-[13px] text-textMuted mt-4">
+            100K+ members getting verified tips
+        </p>
+
+        <!-- Countdown Timer -->
+        <div class="bg-cardBg border border-purple-900/30 rounded-full px-6 py-2 mt-8 flex items-center gap-2">
+            <span class="text-sm text-gray-300 font-medium">ENDS IN:</span>
+            <span id="countdown" class="text-primary font-bold text-sm tracking-widest">00:23</span>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-3 gap-3 w-full mt-8">
+            <!-- Card 1 -->
+            <div class="bg-cardBg rounded-2xl p-4 flex flex-col items-center justify-center border border-purple-900/20 aspect-square">
+                <i class="ph ph-check text-primary text-2xl mb-2"></i>
+                <span class="font-bold text-sm">100%</span>
+                <span class="text-[9px] text-textMuted mt-1 tracking-wider">ACCURACY</span>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-cardBg rounded-2xl p-4 flex flex-col items-center justify-center border border-purple-900/20 aspect-square">
+                <i class="ph ph-star text-primary text-2xl mb-2"></i>
+                <span class="font-bold text-sm">100K+</span>
+                <span class="text-[9px] text-textMuted mt-1 tracking-wider">MEMBERS</span>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="bg-cardBg rounded-2xl p-4 flex flex-col items-center justify-center border border-purple-900/20 aspect-square">
+                <!-- Using a diamond outline icon as a replacement for the specific shield/diamond shape -->
+                <i class="ph ph-diamond text-primary text-2xl mb-2"></i>
+                <span class="font-bold text-sm">24/7</span>
+                <span class="text-[9px] text-textMuted mt-1 tracking-wider">SUPPORT</span>
+            </div>
+        </div>
+
+        <!-- Footer Trust Badges -->
+        <div class="flex items-center justify-center gap-5 mt-10 text-xs text-textLight">
+            <div class="flex items-center gap-1.5">
+                <i class="ph-fill ph-check-circle text-green-500 text-sm"></i>
+                <span>Verified</span>
+            </div>
+            <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
+            <div class="flex items-center gap-1.5">
+                <i class="ph-fill ph-check-circle text-green-500 text-sm"></i>
+                <span>Secure</span>
+            </div>
+            <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
+            <div class="flex items-center gap-1.5">
+                <i class="ph-fill ph-check-circle text-green-500 text-sm"></i>
+                <span>Instant</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let timeLeft = 23; // Start at 23 seconds like the image
+            const timerElement = document.getElementById('countdown');
+
+            const timer = setInterval(() => {
+                timeLeft--;
+                
+                // Format the time as MM:SS
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                
+                // Add leading zeros
+                const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+                const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+                
+                timerElement.textContent = `${formattedMinutes}:${formattedSeconds}`;
+
+                // Stop at zero
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    timerElement.textContent = "00:00";
+                    // Optional: Change text color when ended
+                    timerElement.classList.replace('text-primary', 'text-red-500');
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
