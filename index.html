@@ -103,13 +103,42 @@
     <!-- Main Container -->
     <div class="max-w-[460px] w-full flex flex-col items-center">
 
-        <!-- Logo Section (Clean and Professional) -->
+        <!-- Logo Section (Clean, Professional & SVG Powered) -->
         <div class="w-full flex flex-col items-center justify-center mb-6">
-            <img id="main-logo" src="logo.png" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';" class="max-h-20 w-auto object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)] mb-1" alt="Big Bang Logo">
+            <!-- Priority 1: User's logo.png image (will auto-display if available) -->
+            <img id="main-logo" src="logo.png" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';" class="max-h-24 w-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)] mb-1" alt="Big Bang Logo">
             
-            <!-- Default Safe Gold Text Logo -->
+            <!-- Priority 2: Custom Gold Starburst & Shield SVG Logo Fallback (If logo.png is missing, this looks stunning) -->
             <div id="logo-fallback" class="flex flex-col items-center justify-center">
-                <span class="text-4xl font-extrabold tracking-widest bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 text-transparent bg-clip-text drop-shadow-[0_2px_8px_rgba(212,175,55,0.3)]">
+                <!-- Golden Crest & Cosmic Bang SVG -->
+                <svg class="w-20 h-20 mb-2 drop-shadow-[0_4px_10px_rgba(212,175,55,0.45)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer Glowing Ring -->
+                    <circle cx="50" cy="50" r="42" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="4 4" class="animate-[spin_120s_linear_infinite]"/>
+                    <!-- Cosmic Burst Rays -->
+                    <path d="M50 2L53 38L88 12L62 44L98 50L62 56L88 88L53 62L50 98L47 62L12 88L38 56L2 50L38 44L12 12L47 38Z" fill="url(#goldGrad)" opacity="0.25" class="animate-pulse"/>
+                    <!-- Inner Solid Shield -->
+                    <path d="M50 15L75 25V55C75 70 50 85 50 85C50 85 25 70 25 55V25L50 15Z" fill="url(#darkGreenGrad)" stroke="url(#goldGrad)" stroke-width="2.5"/>
+                    <!-- Center Exploding Star -->
+                    <path d="M50 30L54 44L68 44L57 52L61 66L50 57L39 66L43 52L32 44L46 44Z" fill="url(#goldGrad)"/>
+                    <circle cx="50" cy="49" r="3" fill="#ffffff" class="animate-ping"/>
+                    <!-- Elegant Inner Border -->
+                    <path d="M50 20L70 28V53C70 65 50 77 50 77C50 77 30 65 30 53V28L50 20Z" stroke="url(#goldGrad)" stroke-width="0.75" opacity="0.6"/>
+                    
+                    <!-- Gradients Configuration -->
+                    <defs>
+                        <linearGradient id="goldGrad" x1="0" y1="0" x2="100" y2="100">
+                            <stop offset="0%" stop-color="#fff2a8"/>
+                            <stop offset="50%" stop-color="#e6b93e"/>
+                            <stop offset="100%" stop-color="#9c771a"/>
+                        </linearGradient>
+                        <linearGradient id="darkGreenGrad" x1="50" y1="15" x2="50" y2="85">
+                            <stop offset="0%" stop-color="#052e16"/>
+                            <stop offset="100%" stop-color="#02140a"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <!-- Brand Typography -->
+                <span class="text-4xl font-black tracking-[0.08em] bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 text-transparent bg-clip-text drop-shadow-[0_2px_8px_rgba(212,175,55,0.4)]">
                     BIG BANG
                 </span>
                 <span class="text-[9px] text-amber-400/80 tracking-[0.4em] font-bold uppercase mt-0.5">
@@ -247,7 +276,7 @@
             </div>
         </div>
 
-        <!-- Meta Compliant Member Live Support Ratings (Replaced Fake Deceptive Cashout Ticker) -->
+        <!-- Meta Compliant Member Live Support Ratings -->
         <div class="w-full bg-emerald-950/20 border border-emerald-950/80 rounded-2xl p-4 mb-8">
             <h4 class="text-[10px] text-amber-400 font-extrabold uppercase tracking-[0.25em] mb-3 text-center">
                 CUSTOMER FEEDBACK &amp; RATINGS
@@ -260,42 +289,6 @@
                         <span id="reviewer-text" class="text-slate-300">"Sahi aur fast response mila support se"</span>
                         <span class="text-yellow-400 font-bold">★★★★★</span>
                     </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Safe 3-Step Guide (Hinglish copy to match policy requirements) -->
-        <div class="w-full bg-emerald-950/15 border border-emerald-500/10 rounded-2xl p-5 mb-8">
-            <h4 class="text-xs text-white font-extrabold text-center uppercase tracking-[0.2em] mb-4">
-                VIP MEMBERSHIP KAISE SETUP KAREN?
-            </h4>
-            <div class="space-y-4">
-                <div class="flex items-start gap-3.5">
-                    <div class="w-6 h-6 rounded-full bg-amber-400/20 text-amber-400 text-xs font-black flex items-center justify-center shrink-0 border border-amber-400/40 mt-0.5">
-                        1
-                    </div>
-                    <div>
-                        <p class="text-xs text-slate-100 font-bold">WhatsApp Par Contact Karen</p>
-                        <p class="text-[11px] text-slate-400 mt-0.5">Niche diye gaye button par click karke direct humare expert team se connect karen.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3.5">
-                    <div class="w-6 h-6 rounded-full bg-amber-400/20 text-amber-400 text-xs font-black flex items-center justify-center shrink-0 border border-amber-400/40 mt-0.5">
-                        2
-                    </div>
-                    <div>
-                        <p class="text-xs text-slate-100 font-bold">VIP Setup Information Lein</p>
-                        <p class="text-[11px] text-slate-400 mt-0.5">Humare representatives aapko transparent membership aur benefits ki poori jankari denge.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3.5">
-                    <div class="w-6 h-6 rounded-full bg-amber-400/20 text-amber-400 text-xs font-black flex items-center justify-center shrink-0 border border-amber-400/40 mt-0.5">
-                        3
-                    </div>
-                    <div>
-                        <p class="text-xs text-slate-100 font-bold">Instant Resolution &amp; Help</p>
-                        <p class="text-[11px] text-slate-400 mt-0.5">24/7 dedicated personal account manager ke sath apni saari queries solve karen.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -318,7 +311,7 @@
             </div>
         </div>
 
-        <!-- Meta Compliant Legal Footer & Policies Links (Crucial to avoid Ad Rejections) -->
+        <!-- Meta Compliant Legal Footer & Policies Links -->
         <div class="w-full border-t border-emerald-950/60 pt-6 mt-4 text-center">
             <!-- 18+ Warning Emblem -->
             <div class="inline-flex items-center gap-1.5 bg-red-950/30 border border-red-500/20 rounded-full px-3 py-1 mb-4">
@@ -326,7 +319,7 @@
                 <span class="text-[10px] text-red-200 font-bold tracking-widest uppercase">Strictly 18+ Only</span>
             </div>
 
-            <!-- Meta Policy Requirement: Legal Document links (Dummy links for compliance) -->
+            <!-- Meta Policy Requirement Links -->
             <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[11px] font-bold text-emerald-400/60 mb-4 uppercase tracking-wider">
                 <a href="#privacy" class="hover:text-amber-400 transition-colors">Privacy Policy</a>
                 <span>|</span>
