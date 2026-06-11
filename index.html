@@ -13,77 +13,50 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #f0f2f5;
-            background-image: radial-gradient(circle at 50% 10%, #ffffff 0%, #d1d5db 100%);
-            color: #111;
+            background-color: #0b0514;
+            background-image: radial-gradient(circle at 50% 0%, #2a164d 0%, #0b0514 60%);
+            color: white;
             min-height: 100vh;
-            overflow-x: hidden;
+        }
+        
+        /* Glowing border animation for profile */
+        .profile-glow {
+            background: linear-gradient(45deg, #ff5e00, #ff00b3, #7b00ff, #ff5e00);
+            background-size: 400% 400%;
+            animation: gradientBorder 5s ease infinite;
         }
 
-        /* Stadium Lights Effect */
-        .stadium-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-            background-image:
-                radial-gradient(circle at 15% 30%, rgba(255,255,255,0.8) 0%, transparent 40%),
-                radial-gradient(circle at 85% 30%, rgba(255,255,255,0.8) 0%, transparent 40%);
-            opacity: 0.7;
+        @keyframes gradientBorder {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        /* Premium Pill shapes (Green with Gold Border) */
-        .gradient-border-pill {
-            position: relative;
-            background: linear-gradient(to bottom, #0f3d24, #051c0e);
-            border-radius: 999px;
-            z-index: 1;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        /* Pulse animation for CTA button */
+        .btn-glow {
+            box-shadow: 0 0 25px rgba(255, 94, 0, 0.4);
+            transition: all 0.3s ease;
         }
-        .gradient-border-pill::before {
-            content: ""; position: absolute; inset: -2.5px; border-radius: 999px;
-            background: linear-gradient(180deg, #FFF9D2, #FFD700, #8B6508);
-            z-index: -1;
+        .btn-glow:hover {
+            box-shadow: 0 0 40px rgba(255, 94, 0, 0.7);
+            transform: translateY(-2px) scale(1.02);
         }
 
-        /* Gold text gradient */
-        .gold-text {
-            background: linear-gradient(180deg, #FFF9D2 0%, #FFD700 40%, #D4AF37 70%, #8B6508 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* WhatsApp pulse animation */
+        .whatsapp-glow {
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        .whatsapp-glow:hover {
+            box-shadow: 0 0 40px rgba(37, 211, 102, 0.7);
+            transform: translateY(-2px) scale(1.02);
         }
 
-        .gold-filter {
-            filter: drop-shadow(0px 4px 3px rgba(0,0,0,0.6));
-        }
-
-        /* Typography matching the image */
-        .text-cricket {
-            font-size: 4.5rem;
-            line-height: 0.85;
-            font-weight: 900;
-            font-style: italic;
-            color: #050505;
-            transform: skewX(-8deg);
-            letter-spacing: -1px;
-        }
-        @media (min-width: 400px) { .text-cricket { font-size: 5.5rem; } }
-
-        .text-id-avail {
-            font-size: 2.8rem;
-            line-height: 0.9;
-            font-weight: 900;
-            font-style: italic;
-            color: #0b361e;
-            transform: skewX(-8deg);
-        }
-        @media (min-width: 400px) { .text-id-avail { font-size: 3.5rem; } }
-
-        /* Super Highlighted CTA Animation */
-        .cta-highlight {
-            animation: superPulse 1.5s infinite ease-in-out;
-        }
-        @keyframes superPulse {
-            0% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
-            50% { transform: scale(1.04); box-shadow: 0 0 30px rgba(255, 215, 0, 0.9), 0 0 20px rgba(37, 211, 102, 0.6); }
-            100% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+        /* Stats card styling */
+        .glass-card {
+            background: rgba(30, 20, 50, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 
@@ -100,110 +73,139 @@
     fbq('init', '1780666083102012');
     fbq('track', 'PageView');
     </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1780666083102012&ev=PageView&noscript=1" alt=""/>
-    </noscript>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1780666083102012&ev=PageView&noscript=1"
+    /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
-<body class="flex flex-col items-center justify-center py-8 px-4 relative">
-
-    <!-- Stadium Background Overlay -->
-    <div class="stadium-bg"></div>
+<body class="flex flex-col items-center justify-center py-10 px-4">
 
     <!-- Main Container -->
-    <div class="max-w-[480px] w-full flex flex-col items-center relative z-10">
+    <div class="max-w-[450px] w-full flex flex-col items-center">
 
-        <!-- Logo Section -->
-        <div class="relative mb-6 flex justify-center w-full">
-            <img src="your-logo.png" alt="Big Bang Logo" class="max-h-36 sm:max-h-44 w-auto object-contain drop-shadow-2xl">
-        </div>
-
-        <!-- Subheading (TRUSTED • FAST • ALWAYS) -->
-        <div class="flex items-center justify-center gap-3 mb-2 w-full">
-            <div class="h-[2px] w-10 bg-gradient-to-l from-[#B8860B] to-transparent"></div>
-            <div class="text-[11px] sm:text-xs font-black tracking-widest text-[#111] italic uppercase">Trusted • Fast • Always</div>
-            <div class="h-[2px] w-10 bg-gradient-to-r from-[#B8860B] to-transparent"></div>
-        </div>
-
-        <!-- Main Title -->
-        <div class="flex flex-col items-center mb-8 w-full">
-            <h1 class="text-cricket">CRICKET</h1>
-            <h2 class="text-id-avail drop-shadow-md">!D AVAILABLE</h2>
-        </div>
-
-        <!-- Premium Bonus Banner -->
-        <div class="w-full flex justify-center mb-8 px-2">
-            <div class="w-full gradient-border-pill flex items-center justify-between px-6 py-3 relative cursor-pointer hover:scale-[1.02] transition-transform duration-300">
-                <!-- Inner Glow -->
-                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[#32854e] rounded-full blur-[20px] opacity-40 z-0"></div>
-
-                <!-- GET -->
-                <div class="text-white font-black italic text-2xl sm:text-3xl tracking-wider z-10">GET</div>
-
-                <!-- Separator -->
-                <div class="w-[2px] h-12 bg-gradient-to-b from-transparent via-[#ffd700] to-transparent transform -skew-x-[15deg] opacity-70 z-10 mx-2"></div>
-
-                <!-- 10% -->
-                <div class="z-10 gold-filter pb-1">
-                    <div class="font-black italic text-[4rem] sm:text-[4.5rem] leading-none tracking-tighter gold-text relative">
-                        10%
-                    </div>
+        <!-- Profile Picture Section -->
+        <div class="relative mb-6">
+            <div class="profile-glow p-1 rounded-full w-32 h-32 flex items-center justify-center">
+                <!-- Text Logo (BB) -->
+                <div class="w-full h-full bg-[#0b0514] rounded-full flex items-center justify-center">
+                    <span class="text-5xl font-black bg-gradient-to-r from-[#ff6a00] to-[#ee0979] text-transparent bg-clip-text tracking-wider">
+                        BB
+                    </span>
                 </div>
-
-                <!-- Separator -->
-                <div class="w-[2px] h-12 bg-gradient-to-b from-transparent via-[#ffd700] to-transparent transform -skew-x-[15deg] opacity-70 z-10 mx-2"></div>
-
-                <!-- WELCOME -->
-                <div class="text-white font-black italic text-2xl sm:text-3xl tracking-wider z-10">WELCOME</div>
             </div>
         </div>
 
-        <!-- Highly Highlighted CTA Button (WhatsApp) -->
-        <a href="https://wa.link/bigbbangin" class="w-[90%] cta-highlight gradient-border-pill flex items-center justify-center gap-3 py-4 px-6 mb-12 group relative z-20">
-            <!-- WhatsApp Icon with White Circle background -->
-            <div class="bg-white rounded-full p-1 shadow-[0_0_10px_rgba(37,211,102,0.8)] z-10">
-                <svg class="w-7 h-7 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-                </svg>
-            </div>
-            <span class="text-white font-black text-xl sm:text-2xl italic tracking-wider z-10 drop-shadow-md">WHATSAPP NOW</span>
-            <span class="text-yellow-400 font-bold text-2xl sm:text-3xl ml-1 z-10 drop-shadow-md">></span>
+        <!-- Titles Section -->
+        <h1 class="text-4xl font-black tracking-widest text-white mb-1 uppercase text-center">BIG BANG</h1>
+        <h2 class="text-2xl font-bold text-[#ff5e00] tracking-widest mb-3 text-center drop-shadow-md">INDIA'S NO. 1 PLATFORM</h2>
+        <p class="text-[10px] sm:text-xs text-[#a78bfa] tracking-[0.25em] mb-8 font-semibold uppercase text-center">Instant ID • Fast Withdrawals</p>
+
+        <!-- CTA Button (WhatsApp) -->
+        <a href="https://wa.me/+910000000000" class="w-full bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-bold text-lg py-4 rounded-xl flex items-center justify-center gap-2 whatsapp-glow mb-4">
+            <!-- WhatsApp Icon -->
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+            WHATSAPP NOW
         </a>
 
-        <!-- Footer Stats Grid -->
-        <div class="grid grid-cols-3 gap-2 w-full pt-6 border-t-2 border-gray-300 border-opacity-60">
-            <!-- SECURE ACCESS -->
-            <div class="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
-                <!-- Padlock Icon -->
-                <svg class="w-8 h-8 sm:w-10 sm:h-10 text-[#111]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                <div class="flex flex-col">
-                    <span class="text-[10px] sm:text-[11px] font-black text-[#111] leading-tight">SECURE ACCESS</span>
-                    <span class="text-[8px] sm:text-[9px] text-gray-600 font-medium leading-tight mt-0.5">Your safety is<br>our priority</span>
+        <!-- Subtext -->
+        <p class="text-xs text-gray-400 mb-8 font-medium">100K+ happy players with instant IDs</p>
+
+        <!-- Countdown Timer -->
+        <div class="glass-card rounded-full px-6 py-2 flex items-center gap-2 mb-10 border border-[#4a2b75]">
+            <span class="text-xs text-gray-300 font-semibold tracking-wider">OFFER ENDS IN:</span>
+            <span id="timer" class="text-[#ff5e00] font-bold text-sm tracking-wider">05:00</span>
+        </div>
+
+        <!-- Stats Grid (3 Columns) -->
+        <div class="grid grid-cols-3 gap-3 w-full mb-10">
+            
+            <!-- Box 1 -->
+            <div class="glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 transition hover:bg-[#2a1a4a]">
+                <!-- Lightning Icon (Fast) -->
+                <svg class="w-6 h-6 text-[#ff5e00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <div class="text-center">
+                    <h3 class="text-lg font-bold text-white leading-tight">1 MIN</h3>
+                    <p class="text-[9px] text-gray-400 uppercase tracking-widest mt-1">Withdrawal</p>
                 </div>
             </div>
 
-            <!-- FAST VERIFICATION -->
-            <div class="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left border-l-2 border-r-2 border-gray-300 border-opacity-60 px-1">
-                <!-- Stopwatch Icon -->
-                <svg class="w-8 h-8 sm:w-10 sm:h-10 text-[#111]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <div class="flex flex-col">
-                    <span class="text-[10px] sm:text-[11px] font-black text-[#111] leading-tight">FAST VERIFICATION</span>
-                    <span class="text-[8px] sm:text-[9px] text-gray-600 font-medium leading-tight mt-0.5">Quick & easy<br>verification</span>
+            <!-- Box 2 -->
+            <div class="glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 transition hover:bg-[#2a1a4a]">
+                <!-- Users Icon -->
+                <svg class="w-6 h-6 text-[#ff5e00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                <div class="text-center">
+                    <h3 class="text-lg font-bold text-white leading-tight">100K+</h3>
+                    <p class="text-[9px] text-gray-400 uppercase tracking-widest mt-1">Active</p>
                 </div>
             </div>
 
-            <!-- 24/7 SUPPORT -->
-            <div class="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
-                <!-- Headset Icon -->
-                <svg class="w-8 h-8 sm:w-10 sm:h-10 text-[#111]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                <div class="flex flex-col">
-                    <span class="text-[10px] sm:text-[11px] font-black text-[#111] leading-tight">24/7 SUPPORT</span>
-                    <span class="text-[8px] sm:text-[9px] text-gray-600 font-medium leading-tight mt-0.5">We are always<br>here for you</span>
+            <!-- Box 3 -->
+            <div class="glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 transition hover:bg-[#2a1a4a]">
+                <!-- Shield/Support Icon -->
+                <svg class="w-6 h-6 text-[#ff5e00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                <div class="text-center">
+                    <h3 class="text-lg font-bold text-white leading-tight">24/7</h3>
+                    <p class="text-[9px] text-gray-400 uppercase tracking-widest mt-1">Support</p>
                 </div>
+            </div>
+
+        </div>
+
+        <!-- Trust Badges Footer -->
+        <div class="flex items-center justify-center gap-4 text-xs font-semibold text-gray-400">
+            <div class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                Verified
+            </div>
+            <span>•</span>
+            <div class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                Secure
+            </div>
+            <span>•</span>
+            <div class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                Instant
             </div>
         </div>
 
     </div>
 
+    <!-- Countdown Timer Script -->
+    <script>
+        // 5 minute timer script
+        let timeInSecs = 5 * 60; // 5 minutes
+        const timerElement = document.getElementById('timer');
+
+        function updateTimer() {
+            let minutes = Math.floor(timeInSecs / 60);
+            let seconds = timeInSecs % 60;
+
+            // Zero padding if less than 10
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            timerElement.textContent = `${minutes}:${seconds}`;
+
+            if (timeInSecs > 0) {
+                timeInSecs--;
+            } else {
+                // Agar timer khatam ho jaye toh phir se 5 min pe reset kardo (FOMO create karne ke liye)
+                timeInSecs = 5 * 60;
+            }
+        }
+
+        // Har ek second me timer update karein
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
 </body>
 </html>
