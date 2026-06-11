@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Bang - India's Premium Gaming Portal</title>
-    <!-- Tailwind CSS import -->
+    <!-- Tailwind CSS ka fast CDN import -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts import -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Premium styling elements compliant with ad policies -->
+    <!-- Premium custom styles jo safe aur error-free hain -->
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -68,7 +68,7 @@
             }
         }
 
-        /* Custom scrollbar styling */
+        /* Custom clean scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -101,7 +101,7 @@
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen py-4 px-4 sm:py-8">
 
-    <!-- Main Container (Mobile view me vertical aur horizontal centering ke liye flex layout) -->
+    <!-- Main Container (Mobile screen par perfect vertical aur horizontal alignment ke liye) -->
     <div class="max-w-[460px] w-full flex flex-col items-center justify-center my-auto space-y-4">
 
         <!-- Top Section: Dynamic Logo Module -->
@@ -110,17 +110,17 @@
             <!-- Smart Dual-Logo Container -->
             <div class="w-full flex flex-col items-center justify-center mb-4">
                 
-                <!-- 1. PNG logo element (Jaise hi logo.png available hoga, ye load ho jayega aur fallback automatically hide ho jayega) -->
+                <!-- 1. PNG logo (Jaise hi logo.png available hoga, ye load ho jayega aur fallback automatic hide ho jayega) -->
                 <img id="main-logo" src="logo.png" 
                      onload="document.getElementById('logo-fallback').style.display='none'; this.classList.remove('hidden');"
                      onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';"
                      class="hidden w-full max-w-[280px] h-auto object-contain drop-shadow-[0_4px_25px_rgba(212,175,55,0.35)]" 
                      alt="Big Bang Logo">
 
-                <!-- 2. Gorgeous SVG Clone Fallback (Perfect replica of ChatGPT Image Jun 11, 2026, 10_09_40 PM.png) -->
+                <!-- 2. Gorgeous SVG Clone Fallback (Perfect replica with zero network requests) -->
                 <div id="logo-fallback" class="flex flex-col items-center justify-center w-full">
                      <svg class="w-full max-w-[320px] h-auto drop-shadow-[0_4px_20px_rgba(212,175,55,0.35)]" viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <!-- Definitions for gradients -->
+                          <!-- Definitions for gradients and shadows -->
                           <defs>
                               <linearGradient id="goldTextGrad" x1="0" y1="0" x2="0" y2="1">
                                   <stop offset="0%" stop-color="#FFF5BD" />
@@ -144,17 +144,15 @@
                               </filter>
                           </defs>
 
-                          <!-- Left Side Wreath/Laurel Wings -->
+                          <!-- Left Side Laurel Wings -->
                           <g transform="translate(142, 52) scale(0.9)" filter="url(#shadowFilter)">
-                              <!-- Outer leaf wings -->
                               <path d="M-10,-5 C-25,-18 -38,-8 -48,-11 C-38,3 -20,3 -10,-5" fill="url(#laurelGrad)" />
                               <path d="M-15,-22 C-32,-30 -45,-18 -55,-18 C-45,-4 -28,-4 -15,-22" fill="url(#laurelGrad)" />
                               <path d="M-22,-38 C-40,-44 -52,-28 -62,-25 C-50,-12 -32,-12 -22,-38" fill="url(#laurelGrad)" />
                           </g>
 
-                          <!-- Right Side Wreath/Laurel Wings -->
+                          <!-- Right Side Laurel Wings -->
                           <g transform="translate(258, 52) scale(0.9)" filter="url(#shadowFilter)">
-                              <!-- Outer leaf wings -->
                               <path d="M10,-5 C25,-18 38,-8 48,-11 C38,3 20,3 10,-5" fill="url(#laurelGrad)" />
                               <path d="M15,-22 C32,-30 45,-18 55,-18 C45,-4 28,-4 15,-22" fill="url(#laurelGrad)" />
                               <path d="M22,-38 C40,-44 52,-28 62,-25 C50,-12 32,-12 22,-38" fill="url(#laurelGrad)" />
@@ -163,11 +161,9 @@
                           <!-- Central Red/Gold Globe -->
                           <circle cx="200" cy="55" r="44" fill="url(#globeGrad)" stroke="url(#laurelGrad)" stroke-width="2" filter="url(#shadowFilter)" />
                           
-                          <!-- Continents Map details inside Globe -->
+                          <!-- Map details inside Globe -->
                           <g opacity="0.75" style="mix-blend-mode: overlay;">
-                              <!-- Abstract Americas -->
                               <path d="M174,34 C177,37 175,44 171,49 C169,53 173,56 175,59 C177,61 175,69 179,73 C183,77 187,71 185,66 C183,61 187,56 185,49 C183,43 179,36 174,34 Z" fill="#FFEAA8" />
-                              <!-- Abstract Africa & Eurasia -->
                               <path d="M206,26 C211,29 213,36 209,43 C206,49 213,53 217,56 C221,59 225,53 229,59 C233,63 227,69 225,73 C221,76 216,71 213,66 C209,61 203,59 199,53 C197,47 201,33 206,26 Z" fill="#FFEAA8" />
                               <circle cx="232" cy="73" r="3" fill="#FFEAA8" />
                               <circle cx="224" cy="79" r="2" fill="#FFEAA8" />
@@ -190,7 +186,7 @@
 
             <!-- Trust Subtitle -->
             <h2 class="text-sm font-extrabold text-[#e5b53b] tracking-[0.15em] text-center uppercase drop-shadow">
-                INDIA'S MOST TRUSTED PORTAL
+                INDIA KA SABSE BHAROSEMAND PORTAL
             </h2>
         </div>
 
@@ -204,7 +200,7 @@
             </div>
         </div>
 
-        <!-- 10% WELCOME BANNER (Sleek and Compact Design) -->
+        <!-- 10% WELCOME BANNER (Sleek aur Compact Design) -->
         <div class="relative w-[90%] rounded-[14px] p-[2px] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 shadow-[0_8px_24px_rgba(1,43,21,0.4),0_0_15px_rgba(212,175,55,0.12)] overflow-hidden shimmer mx-auto">
             <div class="bg-gradient-to-r from-[#012512] via-[#034d28] to-[#012512] rounded-[12px] px-3.5 py-2.5 flex items-center justify-between relative">
                 
@@ -251,7 +247,7 @@
             </div>
         </div>
 
-        <!-- Safe value proposition -->
+        <!-- Value Proposition with Safe Hinglish copy -->
         <p class="text-xs text-emerald-300 tracking-[0.2em] font-semibold uppercase text-center">
             Instant Customer Support • 100% Safe Settlements
         </p>
@@ -267,19 +263,19 @@
             </span>
         </div>
 
-        <!-- Mobile view dead center focus zone: WhatsApp CTA Button -->
+        <!-- Mobile view dead center focus zone: Centered WhatsApp CTA Button (wa.link direct support) -->
         <div class="w-full py-2 flex flex-col items-center">
             <a href="https://wa.link/bigbbangin" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-extrabold text-lg py-4 sm:py-5 rounded-2xl flex items-center justify-center gap-3 btn-pulse transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_25px_rgba(37,211,102,0.4)] select-none cursor-pointer">
                 <svg class="w-7 h-7 filter drop-shadow animate-bounce" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
                 </svg>
-                GET YOUR ID ON WHATSAPP
+                WHATSAPP PAR ID SETUP KAREN
             </a>
 
             <!-- User Safety Guarantee with Secure Shield Icon -->
             <p class="text-xs text-gray-400 font-semibold flex items-center gap-1.5 justify-center text-center mt-2">
                 <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.9L10 1.154l7.834 3.746a1 1 0 01.532.89v5.334c0 3.33-1.87 6.422-4.908 8.1l-3.14 1.737a1 1 0 01-.916 0l-3.14-1.737C4.037 15.632 2.166 12.54 2.166 9.21V5.79a1 1 0 01.532-.89zM10 3L4 5.867v3.343c0 2.41 1.343 4.673 3.513 5.922L10 16.48l2.487-1.348c2.17-1.249 3.513-3.513 3.513-5.922V5.867L10 3zm1 5v2h2v2h-2v2H9v-2H7v-2h2V8h2z" clip-rule="evenodd"></path></svg>
-                India's Safest VIP Support Channel
+                India Ka Sabse Safe VIP Support Channel
             </p>
         </div>
 
@@ -330,7 +326,7 @@
                     <span class="text-xs text-slate-200 font-semibold flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         <span id="reviewer-name" class="text-amber-300">Amit Verma:</span> 
-                        <span id="reviewer-text" class="text-slate-300">"Super fast and extremely helpful support team."</span>
+                        <span id="reviewer-text" class="text-slate-300">"Sahi aur fast response mila support se."</span>
                         <span class="text-yellow-400 font-bold">★★★★★</span>
                     </span>
                 </div>
@@ -366,13 +362,13 @@
 
     <!-- Live Customer Support Review Feed Manager (Bug-Free & Optimized) -->
     <script>
-        // High Trust, compliant simulated real-time reviews
+        // High Trust, compliant simulated real-time reviews in Hindi (Latin)
         const sampleReviews = [
-            { name: "Suresh Rawat:", text: "Best customer service, got instant activation support." },
-            { name: "Mohit Kumar:", text: "Awesome response time, under 2 minutes!" },
-            { name: "Pooja Sharma:", text: "Highly professional and friendly support team." },
-            { name: "Rohan Das:", text: "Super transparent process and highly reliable." },
-            { name: "Deepak Yadav:", text: "Easiest setup ever, completely secured portal." }
+            { name: "Suresh Rawat:", text: "Best customer service, turant activation ho gayi." },
+            { name: "Mohit Kumar:", text: "Response time bahut hi badiya hai, under 2 minutes!" },
+            { name: "Pooja Sharma:", text: "Bahut hi professional aur friendly support team." },
+            { name: "Rohan Das:", text: "Poori tarah transparent process aur trusted service." },
+            { name: "Deepak Yadav:", text: "Easy setup hai aur account managers helpful hain." }
         ];
 
         const reviewerName = document.getElementById('reviewer-name');
